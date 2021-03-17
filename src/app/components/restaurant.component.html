@@ -1,0 +1,21 @@
+<h1>My restaurants</h1>
+
+<div *ngFor="let ingredient of ingredients" class="ingredient-item">
+  <h2>{{ ingredient.name }}</h2>
+  <p>
+    Quantity
+    <span
+      [ngStyle]="{fontSize: getFontSize(ingredient)}"
+      [ngClass]="{
+        'low-quantity': ingredient.quantity <= 40,
+        'medium-quantity':
+          ingredient.quantity > 40 && ingredient.quantity <= 60,
+        'big-quantity': ingredient.quantity > 60
+      }"
+      >{{ ingredient.quantity }}</span
+    >
+  </p>
+  <p *ngIf="ingredient.quantity < 50">
+    We need another {{ 100 - ingredient.quantity }}
+  </p>
+</div>

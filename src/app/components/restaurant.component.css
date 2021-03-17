@@ -1,0 +1,22 @@
+.low-quantity {
+  color: red;
+}
+
+.medium-quantity {
+  color: yellow;
+}
+
+.big-quantity {
+  color: green;
+}
+
+.ingredient-item {
+  margin: 4px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+  background-color: lightsalmon;
+  border-radius: 12px;
+  box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.7);
+}
